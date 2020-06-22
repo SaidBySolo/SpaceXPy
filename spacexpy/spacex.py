@@ -5,7 +5,7 @@ http = Http()
 
 class SpaceX():
 
-    async def capsules(self, capsule_id:str= None, query:Any=None):
+    async def capsules(self, capsule_id:str= None, query=None):
         if capsule_id is None and query is None:
             return await http.requests('get', '/capsules')
         elif capsule_id is not None:
