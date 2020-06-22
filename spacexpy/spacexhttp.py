@@ -33,8 +33,8 @@ class Http():
     async def launchpads(self, method:str, endpoint:str, json=None):
         return await self.request(method, endpoint, json)
 
-    async def roadster(self, method:str, endpoint:str, json=None):
-        return await self.request(method, endpoint, json)
+    async def roadster(self, method:str, endpoint:str):
+        return await self.request(method, endpoint)
 
     async def rockets(self, method:str, endpoint:str, json=None):
         return await self.request(method, endpoint, json)
