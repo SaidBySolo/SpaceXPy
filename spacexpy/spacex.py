@@ -1,5 +1,5 @@
-from spacexerror import *
-from spacexhttp import Http
+from .spacexerror import *
+from .spacexhttp import Http
 
 http = Http()
 
