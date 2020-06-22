@@ -1,7 +1,6 @@
 class SpaceXException(Exception):
-    def __init__(self):
-        super().__init__()
+    pass
 
 class UnexpectedArguments(SpaceXException):
-    def __init__(self):
-        super().__init__('An unexpected arguments has arrived.')
+    def __init__(self, reason=None):
+        super().__init__(f'An unexpected arguments has arrived. {reason}')
