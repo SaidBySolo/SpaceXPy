@@ -9,7 +9,7 @@ class SpaceX():
         return SpaseXResponse(await spacex.capsules(capsule_id,query), rawdata)
     
     async def company(self):
-        return SpaseXResponse(await spacex.company())
+        return SpaseXResponse(await spacex.company(), rawdata=True)
 
     async def cores(self, core_id:str= None, query=None, rawdata=False):
         return SpaseXResponse(await spacex.cores(core_id, query), rawdata)
@@ -33,7 +33,7 @@ class SpaceX():
         return SpaseXResponse(await spacex.payloads(payload_id, query), rawdata)
 
     async def roadster(self):
-        return SpaseXResponse(await spacex.roadster())
+        return SpaseXResponse(await spacex.roadster(), rawdata=True)
 
     async def rockets(self, rocket_id:str= None, query=None, rawdata=False):
         return SpaseXResponse(await spacex.rockets(rocket_id, query), rawdata)
