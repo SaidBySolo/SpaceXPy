@@ -7,7 +7,7 @@ This package is Asynchronous wrapping of the [informal SpaceX REST API](https://
 ## Install
 
 ```sh
-pip install spasexpy
+pip install spacexpy
 ```
 
 ## Quick Example
