@@ -70,7 +70,7 @@ Check this [docs](https://github.com/r-spacex/SpaceX-API/blob/master/docs/v4/REA
 
 ### 1.0.0
 
-* Released 1.0.0: All endpoints corver
+* Released 1.0.0: All endpoints cover
 
 
 ## Contributing
