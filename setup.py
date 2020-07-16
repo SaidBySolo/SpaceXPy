@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="spacexpy",
-    version="1.0.0",
+    version="1.0.1",
     license='MIT',
     author="Ryu ju heon",
     author_email="SaidBySolo@gmail.com",

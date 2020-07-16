@@ -68,6 +68,10 @@ Check this [docs](https://github.com/r-spacex/SpaceX-API/blob/master/docs/v4/REA
 
 ## Patch note
 
+### 1.0.1
+
+* Grammer fix 1.0.1: PR [#1](https://github.com/SaidBySolo/SpaceX-Async-Wrapper/pull/1)
+
 ### 1.0.0
 
 * Released 1.0.0: All endpoints cover
