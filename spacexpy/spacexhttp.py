@@ -1,5 +1,4 @@
 import aiohttp
-from aiohttp.client import request
 
 
 class Http():
