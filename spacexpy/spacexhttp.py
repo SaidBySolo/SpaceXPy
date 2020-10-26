@@ -1,10 +1,9 @@
 import aiohttp
 
 
-class Http():
-
+class Http:
     async def request(self, method: str, endpoint: str, json=None):
-        BaseURL = 'https://api.spacexdata.com/v4'
+        BaseURL = "https://api.spacexdata.com/v4"
         url = BaseURL + endpoint
         async with aiohttp.ClientSession() as cs:
             async with aiohttp.request(method, url, json=json) as r:
