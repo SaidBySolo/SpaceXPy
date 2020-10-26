@@ -1,5 +1,6 @@
 import aiohttp
 
+
 class Http():
 
     async def request(self, method: str, endpoint: str, json=None):

@@ -29,8 +29,8 @@ class SpaceXClient:
             return await http.get('post', '/cores/query', query)
         else:
             return await http.get('get', '/cores')
-    
-    async def crew(self, crew_id:str=None, query=None):
+
+    async def crew(self, crew_id: str = None, query=None):
         if len(list(filter(None.__ne__, [crew_id, query]))) >= 2:
             raise UnexpectedArguments(
                 "Only one argument is required but received more than one")
@@ -40,6 +40,7 @@ class SpaceXClient:
             return await http.get('post', '/crew/query', query)
         else:
             return await http.get('get', '/crew')
+
     async def dragons(self, dragon_id: str = None, query=None):
         if len(list(filter(None.__ne__, [dragon_id, query]))) >= 2:
             raise UnexpectedArguments(
@@ -61,7 +62,7 @@ class SpaceXClient:
             return await http.get('post', '/landpads/query', query)
         else:
             return await http.get('get', '/landpads')
-          
+
     async def launches(self,
                        schedule: str = None,
                        launche_id: str = None,
@@ -81,6 +82,7 @@ class SpaceXClient:
             return await http.get('post', '/launches/query', query)
         else:
             return await http.get('get', '/launches')
+
     async def launchpads(self, launchpad_id: str = None, query=None):
         if len(list(filter(None.__ne__, [launchpad_id, query]))) >= 2:
             raise UnexpectedArguments("Two or more arguments cannot come.")
@@ -113,6 +115,7 @@ class SpaceXClient:
             return await http.get('post', '/rockets/query', query)
         else:
             return await http.get('get', '/rockets')
+
     async def ships(self, ship_id: str = None, query=None):
         if len(list(filter(None.__ne__, [ship_id, query]))) >= 2:
             raise UnexpectedArguments("Two or more arguments cannot come.")
@@ -122,6 +125,7 @@ class SpaceXClient:
             return await http.get('post', '/ships/query', query)
         else:
             return await http.get('get', '/ships')
+
     async def starlink(self, starlink_id: str = None, query=None):
         if len(list(filter(None.__ne__, [starlink_id, query]))) >= 2:
             raise UnexpectedArguments("Two or more arguments cannot come.")
