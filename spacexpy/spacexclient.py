@@ -8,8 +8,7 @@ class SpaceXClient:
     async def capsules(self, capsule_id: str = None, query=None):
         if len(list(filter(None.__ne__, [capsule_id, query]))) >= 2:
             raise UnexpectedArguments(
-                "Only one argument is required but received more than one"
-            )
+                "Only one argument is required but received more than one")
         elif capsule_id is not None:
             return await http.get("get", f"/capsules/{capsule_id}")
         elif query is not None:
@@ -23,8 +22,7 @@ class SpaceXClient:
     async def cores(self, core_id: str = None, query=None):
         if len(list(filter(None.__ne__, [core_id, query]))) >= 2:
             raise UnexpectedArguments(
-                "Only one argument is required but received more than one"
-            )
+                "Only one argument is required but received more than one")
         elif core_id is not None:
             return await http.get("get", f"/cores/{core_id}")
         elif query is not None:
@@ -35,8 +33,7 @@ class SpaceXClient:
     async def crew(self, crew_id: str = None, query=None):
         if len(list(filter(None.__ne__, [crew_id, query]))) >= 2:
             raise UnexpectedArguments(
-                "Only one argument is required but received more than one"
-            )
+                "Only one argument is required but received more than one")
         elif crew_id is not None:
             return await http.get("get", f"/crew/{crew_id}")
         elif query is not None:
@@ -47,8 +44,7 @@ class SpaceXClient:
     async def dragons(self, dragon_id: str = None, query=None):
         if len(list(filter(None.__ne__, [dragon_id, query]))) >= 2:
             raise UnexpectedArguments(
-                "Only one argument is required but received more than one"
-            )
+                "Only one argument is required but received more than one")
         elif dragon_id is not None:
             return await http.get("get", f"/dragons/{dragon_id}")
         elif query is not None:
@@ -59,8 +55,7 @@ class SpaceXClient:
     async def landpads(self, landpad_id: str = None, query=None):
         if len(list(filter(None.__ne__, [landpad_id, query]))) >= 2:
             raise UnexpectedArguments(
-                "Only one argument is required but received more than one"
-            )
+                "Only one argument is required but received more than one")
         elif landpad_id is not None:
             return await http.get("get", f"/landpads/{landpad_id}")
         elif query is not None:
@@ -68,11 +63,13 @@ class SpaceXClient:
         else:
             return await http.get("get", "/landpads")
 
-    async def launches(self, schedule: str = None, launche_id: str = None, query=None):
+    async def launches(self,
+                       schedule: str = None,
+                       launche_id: str = None,
+                       query=None):
         if len(list(filter(None.__ne__, [schedule, launche_id, query]))) >= 2:
             raise UnexpectedArguments(
-                "Only one argument is required but received more than one"
-            )
+                "Only one argument is required but received more than one")
         elif schedule is not None:
             schedule_list = ["past", "upcomming", "latest", "next"]
             if schedule in schedule_list:
