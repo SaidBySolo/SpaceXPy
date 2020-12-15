@@ -8,7 +8,7 @@ from .spacexmodel import AttributeDict
 class _SpaceX(SpaceXRequester):
     async def capsules(self, capsule_id: str = None, query=None):
         return AttributeDict(
-            await self.capsules(capsule_id, query),
+            await self.request_capsules(capsule_id, query),
         )
 
     async def company(self):
