@@ -1,6 +1,5 @@
-from spacexpy.spacexhttp import Http
-
 from .spacexerror import *
+from spacexpy.spacexhttp import Http
 
 
 class SpaceXRequester(Http):
