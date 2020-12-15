@@ -2,7 +2,8 @@
 
 > A wrapper that supports asynchronous.
 
-This package is Asynchronous wrapping of the [informal SpaceX REST API](https://github.com/r-spacex/SpaceX-API).
+This package is Asynchronous wrapping of the
+[informal SpaceX REST API](https://github.com/r-spacex/SpaceX-API).
 
 ## Install
 
@@ -99,24 +100,28 @@ Print:
 
 ## Attribute
 
-Check this [docs](https://github.com/r-spacex/SpaceX-API/blob/master/docs/v4/README.md)
+Check this
+[docs](https://github.com/r-spacex/SpaceX-API/blob/master/docs/v4/README.md)
 
 ## Patch note
 
 ### 2.0.0
 
-* Now support Sync
-* Change model
-* PR [#3](https://github.com/SaidBySolo/SpaceX-Async-Wrapper/pull/3)
+- Now support Sync
+- Change model
+- PR [#3](https://github.com/SaidBySolo/SpaceX-Async-Wrapper/pull/3)
 
 ### 1.0.1
 
-* Grammer fix 1.0.1: PR [#1](https://github.com/SaidBySolo/SpaceX-Async-Wrapper/pull/1)
+- Grammer fix 1.0.1: PR
+  [#1](https://github.com/SaidBySolo/SpaceX-Async-Wrapper/pull/1)
 
 ### 1.0.0
 
-* Released 1.0.0: All endpoints cover
+- Released 1.0.0: All endpoints cover
 
 ## Contributing
 
-You can [Open an issue](https://github.com/SaidBySolo/SpaceX-SimpleWrapper/issues) or submit PRs.
+You can
+[Open an issue](https://github.com/SaidBySolo/SpaceX-SimpleWrapper/issues) or
+submit PRs.
