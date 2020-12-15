@@ -6,7 +6,8 @@ class AttributeDict:
     def __init__(self, value={}, **kwargs):
         if isinstance(value, list):
             self.value = [
-                self.__make(item) if isinstance(item, dict) else item for item in value
+                self.__make(item) if isinstance(item, dict) else item
+                for item in value
             ]
         else:
             self.value = dict(value, **kwargs)
@@ -50,10 +51,9 @@ class AttributeDict:
                     for item in value
                 ]
             elif isinstance(value, tuple):
-                value = (
-                    item if not isinstance(item, dict) else self.__make(item)
-                    for item in value
-                )
+                value = (item
+                         if not isinstance(item, dict) else self.__make(item)
+                         for item in value)
             elif isinstance(value, set):
                 value = {
                     item if not isinstance(item, dict) else self.__make(item)

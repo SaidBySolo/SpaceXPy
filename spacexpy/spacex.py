@@ -8,9 +8,7 @@ from .spacexrequester import SpaceXRequester
 
 class _SpaceX(SpaceXRequester):
     async def capsules(self, capsule_id: str = None, query=None):
-        return AttributeDict(
-            await self.request_capsules(capsule_id, query),
-        )
+        return AttributeDict(await self.request_capsules(capsule_id, query), )
 
     async def company(self):
         return AttributeDict(await self.request_company())
@@ -27,11 +25,17 @@ class _SpaceX(SpaceXRequester):
     async def landpads(self, landpad_id: str = None, query=None):
         return AttributeDict(await self.request_landpads(landpad_id, query))
 
-    async def launches(self, schedule: str = None, launche_id: str = None, query=None):
-        return AttributeDict(await self.request_launches(schedule, launche_id, query))
+    async def launches(self,
+                       schedule: str = None,
+                       launche_id: str = None,
+                       query=None):
+        return AttributeDict(await
+                             self.request_launches(schedule, launche_id,
+                                                   query))
 
     async def launchpads(self, launchpad_id: str = None, query=None):
-        return AttributeDict(await self.request_launchpads(launchpad_id, query))
+        return AttributeDict(await
+                             self.request_launchpads(launchpad_id, query))
 
     async def payloads(self, payload_id: str = None, query=None):
         return AttributeDict(await self.request_payloads(payload_id, query))

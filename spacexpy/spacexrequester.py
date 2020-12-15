@@ -6,8 +6,7 @@ class SpaceXRequester(Http):
     def check_argument(self, args: list):
         if len(list(filter(None.__ne__, args))) >= 2:
             raise UnexpectedArguments(
-                "Only one argument is required but received more than one"
-            )
+                "Only one argument is required but received more than one")
 
     async def request_capsules(self, capsule_id: str = None, query=None):
         self.check_argument([capsule_id, query])
@@ -57,9 +56,10 @@ class SpaceXRequester(Http):
         else:
             return await self.get("get", "/landpads")
 
-    async def request_launches(
-        self, schedule: str = None, launche_id: str = None, query=None
-    ):
+    async def request_launches(self,
+                               schedule: str = None,
+                               launche_id: str = None,
+                               query=None):
         self.check_argument([schedule, launche_id, query])
         if schedule is not None:
             schedule_list = ["past", "upcomming", "latest", "next"]
