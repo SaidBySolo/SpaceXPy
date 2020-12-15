@@ -1,8 +1,9 @@
 import asyncio
 import functools
 from typing import Any
-from .spacexrequester import SpaceXRequester
+
 from .spacexmodel import AttributeDict
+from .spacexrequester import SpaceXRequester
 
 
 class _SpaceX(SpaceXRequester):
