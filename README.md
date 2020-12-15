@@ -1,4 +1,4 @@
-# SpaceX-Async-Wrapper
+# SpaceXPy
 
 > A wrapper that supports asynchronous.
 
@@ -12,6 +12,21 @@ pip install spacexpy
 
 ## Quick Example
 
+### Sync
+
+```py
+import spacexpy
+
+spacex = spacexpy.SpaceX()
+cl = spacex.company()
+
+print(cl.headquarters)
+print(cl.headquarters.address)
+
+```
+
+### Async
+
 ```py
 import asyncio
 import spacexpy
@@ -19,32 +34,51 @@ import spacexpy
 async def main():
     spacex = spacexpy.SpaceX()
     cl = await spacex.company()
-    print(cl.name)
-    print(cl.summary)
+    print(cl.headquarters)
+    print(cl.headquarters.address)
 
 loop = asyncio.get_event_loop()
 loop.run_until_complete(main())
 ```
+
 Print:
-```
-SpaceX
-SpaceX designs, manufactures and launches advanced rockets and spacecraft. The company was founded in 2002 to revolutionize space technology, with the ultimate goal of enabling people to live on other planets.
+
+```txt
+{"address": "Rocket Road", "city": "Hawthorne", "state": "California"}
+Rocket Road
 ```
 
 ## Get all list
+
+### Sync
+
+```py
+import spacexpy
+
+
+spacex = spacexpy.SpaceX()
+cl = spacex.capsules()
+
+print(cl)
+```
+
+### Async
+
 ```py
 import asyncio
 import spacexpy
 
 async def main():
     spacex = spacexpy.SpaceX()
-    cl = await spacex.capsules(rawdata=True)
-    print(cl.data)
+    cl = await spacex.capsules()
+    print(cl)
 
 loop = asyncio.get_event_loop()
 loop.run_until_complete(main())
 ```
+
 Print:
+
 ```json
 [
     {
@@ -62,11 +96,18 @@ Print:
     ...
 ]
 ```
+
 ## Attribute
 
 Check this [docs](https://github.com/r-spacex/SpaceX-API/blob/master/docs/v4/README.md)
 
 ## Patch note
+
+### 2.0.0
+
+* Now support Sync
+* Change model
+* PR [#3](https://github.com/SaidBySolo/SpaceX-Async-Wrapper/pull/3)
 
 ### 1.0.1
 
@@ -75,7 +116,6 @@ Check this [docs](https://github.com/r-spacex/SpaceX-API/blob/master/docs/v4/REA
 ### 1.0.0
 
 * Released 1.0.0: All endpoints cover
-
 
 ## Contributing
 
