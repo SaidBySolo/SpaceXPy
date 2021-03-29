@@ -45,7 +45,7 @@ class _SpaceX(SpaceXRequester):
         return AttributeDict(await self.request_ships(ship_id, query))
 
     async def starlink(self, starlink_id: str = None, query=None):
-        return AttributeDict(await self.request_ships(starlink_id, query))
+        return AttributeDict(await self.request_starlink(starlink_id, query))
 
 
 class SpaceX(_SpaceX):
