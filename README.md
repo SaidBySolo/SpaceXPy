@@ -103,6 +103,10 @@ Check this [docs](https://github.com/r-spacex/SpaceX-API/blob/master/docs/v4/REA
 
 ## Patch note
 
+### 2.0.1
+
+* PR[#4] (https://github.com/SaidBySolo/SpaceXPy/pull/9)
+
 ### 2.0.0
 
 * Now support Sync
