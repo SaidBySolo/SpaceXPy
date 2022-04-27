@@ -62,7 +62,7 @@ class SpaceXRequester(Http):
     ):
         self.check_argument([schedule, launche_id, query])
         if schedule is not None:
-            schedule_list = ["past", "upcomming", "latest", "next"]
+            schedule_list = ["past", "upcoming", "latest", "next"]
             if schedule in schedule_list:
                 return await self.get("get", f"/launches/{schedule}")
             else:
