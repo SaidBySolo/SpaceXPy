@@ -103,9 +103,13 @@ Check this [docs](https://github.com/r-spacex/SpaceX-API/blob/master/docs/v4/REA
 
 ## Patch note
 
+### 2.0.2
+
+* PR [#10](https://github.com/SaidBySolo/SpaceXPy/pull/10)
+
 ### 2.0.1
 
-* PR[#4] (https://github.com/SaidBySolo/SpaceXPy/pull/9)
+* PR [#9](https://github.com/SaidBySolo/SpaceXPy/pull/9)
 
 ### 2.0.0
 
